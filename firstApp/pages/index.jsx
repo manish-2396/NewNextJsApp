@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,10 @@ export default function Home() {
       <main>
         <div className="flex justify-center gap-8">
           <div>
-            <a href="Add"> Add Product </a>
+            <Link href="Add"> Add</Link>
           </div>
           <div>
-            <a href="ProductPage"> Show Product </a>
+            <Link href="ProductPage"> Show Product </Link>
           </div>
         </div>
       </main>
