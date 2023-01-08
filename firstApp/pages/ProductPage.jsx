@@ -53,9 +53,11 @@ const ProductPage = () => {
                 <div className="w-20">
                   <img src={item.img} alt={item.type} />
                 </div>
-                <h4>{item.type}</h4>
-                <p>{item.description}</p>
-                <h5>${item.price}</h5>
+                <br/>
+                <h4>Type :-{item.type}</h4>
+                <p>Description :-{item.description}</p>
+                <h5>Price :-${item.price}</h5>
+                <br/>
                 <button onClick={() => handledelete(item.id)}>Remove</button>
               </div>
             );

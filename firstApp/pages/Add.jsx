@@ -7,7 +7,7 @@ const Add = () => {
     year: "",
     description: "",
     price: "",
-    img: "https://thumbs.dreamstime.com/b/brown-wood-dining-table-dark-living-room-32662902.jpg",
+    img: "",
   });
 
   const handleChange = (event) => {
@@ -32,7 +32,7 @@ const Add = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        alert("Data added successfully!")
+        alert("Data added successfully!");
         console.log(res);
       });
   };
@@ -45,7 +45,6 @@ const Add = () => {
         <div>
           <Link href="ProductPage"> Show Product </Link>
         </div>
-       
       </div>
       <div className="pt-0.5 flex justify-center">
         <div>
@@ -53,16 +52,33 @@ const Add = () => {
             Add to Product
           </h3>
           <form id="form" onSubmit={handleSubmit}>
-            <div className="p-2 flex justify-between">
+            <div>
+              <label>Image </label>
+              <br />
+              <input
+                required
+                type="text"
+                name="img"
+                placeholder="Enter Image src..."
+                id="img"
+                onChange={handleChange}
+              />
+            </div>
+            <br/>
+            <div>
               <label>Type of Furniture </label>
+              <br />
               <select id="type" onChange={handleChange} name="type" required>
                 <option value="">Type</option>
                 <option value="Study table">Study table</option>
                 <option value="chair">chair</option>
               </select>
             </div>
-            <div className="p-2 flex justify-between">
+            <br/>
+            <div>
               <label>Year of purchase</label>
+              <br />
+
               <select id="year" onChange={handleChange} name="year" required>
                 <option value="">Year</option>
                 <option value="2016">2016</option>
@@ -71,8 +87,10 @@ const Add = () => {
                 <option value="2019">2019</option>
               </select>
             </div>
-            <div className="p-2 flex justify-between">
+            <br/>
+            <div>
               <label>Description</label>
+              <br />
               <div>
                 <input
                   required
@@ -84,8 +102,10 @@ const Add = () => {
                 />
               </div>
             </div>
-            <div className="p-2 flex justify-between">
+            <br/>
+            <div>
               <label>Price</label>
+              <br />
               <div>
                 <input
                   required
@@ -97,6 +117,7 @@ const Add = () => {
                 />
               </div>
             </div>
+            <br/>
             <div className="p-2">
               <input type="submit" />
             </div>
