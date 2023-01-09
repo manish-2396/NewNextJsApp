@@ -60,26 +60,27 @@ const Add = () => {
                 type="text"
                 name="img"
                 placeholder="Enter Image src..."
-                id="img"
                 onChange={handleChange}
               />
             </div>
-            <br/>
+            <br />
             <div>
               <label>Type of Furniture </label>
               <br />
-              <select id="type" onChange={handleChange} name="type" required>
-                <option value="">Type</option>
-                <option value="Study table">Study table</option>
-                <option value="chair">chair</option>
-              </select>
+              <div>
+                <input
+                  required
+                  name="type"
+                  placeholder="Enter Type of Furniture"
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-            <br/>
+            <br />
             <div>
               <label>Year of purchase</label>
               <br />
-
-              <select id="year" onChange={handleChange} name="year" required>
+              <select onChange={handleChange} name="year" required>
                 <option value="">Year</option>
                 <option value="2016">2016</option>
                 <option value="2017">2017</option>
@@ -87,7 +88,7 @@ const Add = () => {
                 <option value="2019">2019</option>
               </select>
             </div>
-            <br/>
+            <br />
             <div>
               <label>Description</label>
               <br />
@@ -97,12 +98,11 @@ const Add = () => {
                   type="text"
                   name="description"
                   placeholder="Enter Description"
-                  id="description"
                   onChange={handleChange}
                 />
               </div>
             </div>
-            <br/>
+            <br />
             <div>
               <label>Price</label>
               <br />
@@ -117,7 +117,7 @@ const Add = () => {
                 />
               </div>
             </div>
-            <br/>
+            <br />
             <div className="p-2">
               <input type="submit" />
             </div>

@@ -5,7 +5,12 @@ const ProductPage = () => {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    fetch("http://localhost:3000/api/data")
+    fetch("http://localhost:3000/api/data" , {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
       .then((res) => res.json())
       .then((res) => {
         setData(res.data);

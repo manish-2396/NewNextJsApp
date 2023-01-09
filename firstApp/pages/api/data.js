@@ -32,8 +32,6 @@ export default async function data(req, res) {
       res.status(200).json({ massage: "200", data: data.product });
     }
     case "DELETE": {
-      console.log("delete", req.body);
-
       const { id } = req.body;
 
       const productData = await fs.readFile(
